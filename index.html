@@ -284,8 +284,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>Marketplaces and authentication apps act on a model's confidence score. If confidence stays high while accuracy falls, every threshold built on it fails without warning.</dd>
-              <dt>What I built</dt><dd><ul><li>An evaluation pipeline in Python (PyTorch, OpenCV, CLIP, MobileNet) that ran 4 controlled experiments over 136 product images: occlusion, noise, low resolution and manipulation</li><li>A full-stack app (Next.js, Claude vision) with multi-photo upload, a confidence bar, a traffic-light risk signal and scan history. The API key stays on the server and photos under 30% confidence are rejected with a request for a better shot</li></ul></dd>
-              <dt>Result</dt><dd>Named the pattern Overconfidence Failure. Presented at MURALS 2026 and selected for the UCSD Undergraduate Research Hub Student Spotlight.</dd>
+              <dt>What I built</dt><dd><ul><li>Stress tests of a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images</li><li>Shipped the findings into the full-stack app (Next.js, Claude vision) as confidence thresholds, a low-confidence retake prompt and risk-based wording</li></ul></dd>
+              <dt>Result</dt><dd>With logos occluded, brand accuracy fell 17 points while confidence fell only 0.7. Named the pattern Overconfidence Failure. Presented at MURALS 2026 and selected for the UCSD Undergraduate Research Hub Student Spotlight.</dd>
             </dl>
           </details>
         </div>
@@ -334,7 +334,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>Small teams want to see errors and slow routes in production without a heavy agent or sending user data to a vendor.</dd>
-              <dt>What I built</dt><dd><ul><li>Backend testing, QA checklists and research as the team's backend and QA engineer</li><li>Beacon and Navigation API event capture to cut listener overhead on the backend path</li><li>Security fix: escaped quotes in <span class="mono">escapeHtml</span> to close a stored XSS, plus a stats fix separating historical max users from active users</li></ul></dd>
+              <dt>What I built</dt><dd><ul><li>Request validation and 37+ server unit tests for the Node.js event API, plus Playwright end-to-end tests in CI</li><li>Beacon and Navigation API event capture to cut listener overhead on the backend path</li><li>Security fix: escaped quotes in <span class="mono">escapeHtml</span> to close a stored XSS, plus a stats fix separating historical max users from active users</li></ul></dd>
               <dt>Result</dt><dd>Shipped as a deployable product with CI, Playwright end-to-end tests, Clerk auth and per-user data scoping.</dd>
             </dl>
           </details>
@@ -430,13 +430,14 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
         </div>
       </li>
       <li class="role">
-        <div class="date">Jan 2026 – Jun 2026</div>
+        <div class="date">Jan 2026 – May 2026</div>
         <div class="body">
           <h3>Undergraduate Student Researcher</h3>
           <p class="org">UC San Diego Jacobs School of Engineering, Faculty Mentor Program · La Jolla, CA</p>
           <ul>
-            <li>Tested whether a product recognition model's confidence falls in step with its accuracy under visual perturbation, with Prof. Pengtao Xie (ECE)</li>
-            <li>Found accuracy fell about 17 percentage points while confidence stayed nearly flat, and named it Overconfidence Failure</li>
+            <li>Stress-tested a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images, advised by Prof. Pengtao Xie (ECE)</li>
+            <li>Found an overconfidence failure: with logos occluded, brand accuracy fell 17 points while model confidence fell only 0.7</li>
+            <li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li>
             <li>Presented at MURALS 2026 and selected for the Undergraduate Research Hub Student Spotlight</li>
           </ul>
         </div>
