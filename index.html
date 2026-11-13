@@ -236,13 +236,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
         <li><a href="#showbrand"><div class="n">17 pp</div><div class="l">accuracy drop the model never flagged, in ShowBrand</div></a></li>
         <li><a href="#coverage-keeper"><div class="n">2nd</div><div class="l">AI in Healthcare track, Solix Empower Hackathon</div></a></li>
         <li><a href="#exp-lgu"><div class="n">7 stages</div><div class="l">AI red team lifecycle presented to the LG Uplus CTO</div></a></li>
-        <li><a href="#exp-matcha"><div class="n">33 → 1</div><div class="l">unvalidated env vars replaced by one fail-fast module</div></a></li>
+        <li><a href="#exp-matcha"><div class="n">340+</div><div class="l">tests gating every merge in the Match'a CI pipeline</div></a></li>
       </ul>
     </div>
     <aside class="side" aria-label="Current role and capabilities">
       <div>
         <h2>Currently</h2>
-        <p style="margin:0">Technical Lead Intern at Match'a</p>
+        <p style="margin:0">Software Engineer at Match'a</p>
         <p class="where" style="margin:6px 0 0">Remote, from San Diego, CA</p>
       </div>
       <div>
@@ -276,7 +276,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
           <p class="desc">An AI product recognition app, tested on degraded and manipulated photos until it broke.</p>
           <p class="ctx">Personal project, then UCSD FMP research with Prof. Pengtao Xie (ECE)</p>
           <p class="result">Accuracy fell <b>17 percentage points</b> under adversarial inputs while confidence moved <b>0.7</b></p>
-          <ul class="chips"><li>Python</li><li>PyTorch</li><li>OpenCV</li><li>CLIP</li><li>MobileNet</li><li>Next.js</li><li>Claude API</li></ul>
+          <ul class="chips"><li>Python</li><li>pandas</li><li>Pillow</li><li>Next.js</li><li>Claude API</li></ul>
           <div class="plinks">
             <a href="https://github.com/woosik-study/ShowBrand-Product" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Code</a>
           </div>
@@ -284,7 +284,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>Marketplaces and authentication apps act on a model's confidence score. If confidence stays high while accuracy falls, every threshold built on it fails without warning.</dd>
-              <dt>What I built</dt><dd><ul><li>Stress tests of a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images</li><li>Shipped the findings into the full-stack app (Next.js, Claude vision) as confidence thresholds, a low-confidence retake prompt and risk-based wording</li></ul></dd>
+              <dt>What I built</dt><dd><ul><li>Originated the project and ran 4 controlled experiments (baseline, blur, logo occlusion, AI manipulation) on 136 images</li><li>A Next.js app on Claude vision and a Python harness (pandas, Pillow) to degrade, run and score test images</li><li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li></ul></dd>
               <dt>Result</dt><dd>With logos occluded, brand accuracy fell 17 points while confidence fell only 0.7. Named the pattern Overconfidence Failure. Presented at MURALS 2026 and selected for the UCSD Undergraduate Research Hub Student Spotlight.</dd>
             </dl>
           </details>
@@ -310,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>KFF counted 69% of post-pandemic Medicaid disenrollments as procedural. People lost coverage over a missed letter, not over eligibility.</dd>
-              <dt>What I built</dt><dd><ul><li>The letter reader backend: vision LLM calls with schema-validated output, 429/5xx retry and a safe fallback</li><li>Health data protection: upload type, size and rate limits, guardrails on every output field and content-free logs</li><li>The guardrail that replaces any eligibility verdict with a safe fallback and the state's phone number, plus tests that block a merge if it slips</li><li>A 13-notice labeled evaluation set with a fixed dev/test split</li></ul></dd>
+              <dt>What I built</dt><dd><ul><li>The letter reader backend: vision LLM calls with schema-validated output, 429/5xx retry and a safe fallback</li><li>An upload API with type, size and rate limits, output guardrails and no letter content in logs</li><li>The guardrail that replaces any eligibility verdict with a safe fallback and the state's phone number, plus tests that block a merge if it slips</li><li>A 13-notice labeled evaluation set with a fixed dev/test split</li></ul></dd>
               <dt>Stack</dt><dd>Next.js, TypeScript, Claude API, Vitest, Playwright, Vercel</dd>
               <dt>Result</dt><dd>Zero eligibility verdicts on the test set. I also added multi-page support for photos and PDFs. Next up is translation for non-English readers and expansion from Oregon to the rest of the West Coast.</dd>
             </dl>
@@ -400,17 +400,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
       <li class="role" id="exp-matcha">
         <div class="date">Jun 2026 – Present</div>
         <div class="body">
-          <h3>Technical Lead Intern</h3>
-          <p class="org">Match'a, early-stage AI matchmaking startup · Remote</p>
+          <h3>Software Engineer</h3>
+          <p class="org">Match'a, mobile and web social app · Remote</p>
           <ul>
-            <li>Own the platform's architecture and technical direction, and lead 3 engineering interns through planning and code review in Linear</li>
-            <li>Added Twilio webhook signature validation to the inbound SMS route, closing an unauthenticated endpoint before launch</li>
-            <li>Added PII scrubbing in Sentry so error reports stopped carrying user data to a third party</li>
-            <li>Rate limited LLM endpoints to cap abuse and cost exposure</li>
-            <li>Replaced 33 unvalidated environment variables across 64 call sites with one zod module that fails fast at boot</li>
-            <li>Added Semgrep SAST and gitleaks secret scanning to CI and cleared high-severity npm advisories</li>
-            <li>Built the GitHub Actions pipeline that gates every merge on type checks, linting, a 340+ test suite and a build</li>
-            <li>Instrumented Sentry across server, edge and client runtimes covering 80+ API routes</li>
+            <li>Lead 3 software engineers building a mobile and web social app, including a feature that renders a user's face as a privacy-preserving avatar</li>
+            <li>Engineered the GitHub Actions CI pipeline gating every merge on type checks, linting, a 340+ test suite and a build</li>
+            <li>Hardened security with Twilio webhook signature checks, LLM route rate limits, and Semgrep and gitleaks scans in CI</li>
+            <li>Instrumented Sentry error monitoring across server, edge and client runtimes covering 80+ API routes</li>
           </ul>
         </div>
       </li>
@@ -435,7 +431,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
           <h3>Undergraduate Student Researcher</h3>
           <p class="org">UC San Diego Jacobs School of Engineering, Faculty Mentor Program · La Jolla, CA</p>
           <ul>
-            <li>Stress-tested a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images, advised by Prof. Pengtao Xie (ECE)</li>
+            <li>Originated the project and ran 4 controlled experiments (baseline, blur, logo occlusion, AI manipulation) on 136 images, advised by Prof. Pengtao Xie (ECE)</li>
+            <li>Built a Next.js app on Claude vision and a Python harness (pandas, Pillow) to degrade, run and score test images</li>
             <li>Found an overconfidence failure: with logos occluded, brand accuracy fell 17 points while model confidence fell only 0.7</li>
             <li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li>
             <li>Presented at MURALS 2026 and selected for the Undergraduate Research Hub Student Spotlight</li>
@@ -448,9 +445,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
           <h3>Operations Technology Assistant</h3>
           <p class="org">Youngduk Electronics, electronic components distributor · South Korea</p>
           <ul>
-            <li>Built the company's automated inventory tracking system on real-time inbound and outbound shipment data, cutting stock discrepancies by 30%</li>
-            <li>Integrated live foreign exchange data into the ERP system, improving financial accuracy by 20%</li>
-            <li>Built reporting dashboards for executive decisions and maintained the system for 3 years</li>
+            <li>Built the internal logistics and inventory management program, designing its data model and reporting flow</li>
+            <li>Automated inventory tracking and ERP reporting through it, cutting stock errors 30% and raising data accuracy 20%</li>
+            <li>Maintained and updated the program over 3 years as the product catalog and reporting requirements changed</li>
           </ul>
         </div>
       </li>
@@ -487,7 +484,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
         <div class="skills">
           <div><h3>Languages</h3><ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>C</li><li>C++</li><li>Java</li><li>SQL</li><li>ARM assembly</li><li>Bash</li></ul></div>
           <div><h3>Security</h3><ul class="chips"><li>MITRE ATLAS</li><li>OWASP LLM Top 10</li><li>Garak</li><li>PyRIT</li><li>Threat modeling</li><li>Webhook validation</li><li>Rate limiting</li><li>PII scrubbing</li><li>Semgrep</li><li>gitleaks</li></ul></div>
-          <div><h3>AI and ML</h3><ul class="chips"><li>PyTorch</li><li>OpenCV</li><li>CLIP</li><li>MobileNet</li><li>Claude API</li><li>Vertex AI</li><li>Gemini</li></ul></div>
+          <div><h3>AI and ML</h3><ul class="chips"><li>Claude API</li><li>Vertex AI</li><li>Gemini</li><li>Vision language models</li><li>Structured output</li><li>LLM evaluation</li><li>pandas</li><li>Pillow</li></ul></div>
           <div><h3>Web and backend</h3><ul class="chips"><li>React</li><li>Next.js</li><li>Node.js</li><li>Supabase</li><li>Postgres</li><li>Clerk</li><li>zod</li></ul></div>
           <div><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub Actions</li><li>Playwright</li><li>Jest</li><li>Vitest</li><li>Sentry</li><li>PostHog</li><li>Linear</li><li>Linux</li></ul></div>
         </div>
