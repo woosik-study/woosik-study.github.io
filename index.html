@@ -242,8 +242,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
     <aside class="side" aria-label="Current role and capabilities">
       <div>
         <h2>Currently</h2>
-        <p style="margin:0">Software Engineer at Match'a</p>
-        <p class="where" style="margin:6px 0 0">Remote, from San Diego, CA</p>
+        <p style="margin:0">B.S. Computer Science at UC San Diego</p>
+        <p class="where" style="margin:6px 0 0">Open to Summer 2027 security internships</p>
       </div>
       <div>
         <h2>Capabilities</h2>
@@ -284,7 +284,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>Marketplaces and authentication apps act on a model's confidence score. If confidence stays high while accuracy falls, every threshold built on it fails without warning.</dd>
-              <dt>What I built</dt><dd><ul><li>Originated the project and ran 4 controlled experiments (baseline, blur, logo occlusion, AI manipulation) on 136 images</li><li>A Next.js app on Claude vision and a Python harness (pandas, Pillow) to degrade, run and score test images</li><li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li></ul></dd>
+              <dt>What I built</dt><dd><ul><li>Stress tests of a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images</li><li>A Next.js app on Claude vision and a Python harness (pandas, Pillow) to degrade, run and score test images</li><li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li></ul></dd>
               <dt>Result</dt><dd>With logos occluded, brand accuracy fell 17 points while confidence fell only 0.7. Named the pattern Overconfidence Failure. Presented at MURALS 2026 and selected for the UCSD Undergraduate Research Hub Student Spotlight.</dd>
             </dl>
           </details>
@@ -310,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <summary>Read the details</summary>
             <dl class="dl">
               <dt>Problem</dt><dd>KFF counted 69% of post-pandemic Medicaid disenrollments as procedural. People lost coverage over a missed letter, not over eligibility.</dd>
-              <dt>What I built</dt><dd><ul><li>The letter reader backend: vision LLM calls with schema-validated output, 429/5xx retry and a safe fallback</li><li>An upload API with type, size and rate limits, output guardrails and no letter content in logs</li><li>The guardrail that replaces any eligibility verdict with a safe fallback and the state's phone number, plus tests that block a merge if it slips</li><li>A 13-notice labeled evaluation set with a fixed dev/test split</li></ul></dd>
+              <dt>What I built</dt><dd><ul><li>The letter reader backend: vision LLM calls with schema-validated output, 429/5xx retry and a safe fallback</li><li>Health data protection: upload type, size and rate limits, guardrails on every output field and content-free logs</li><li>The guardrail that replaces any eligibility verdict with a safe fallback and the state's phone number, plus tests that block a merge if it slips</li><li>A 13-notice labeled evaluation set with a fixed dev/test split</li></ul></dd>
               <dt>Stack</dt><dd>Next.js, TypeScript, Claude API, Vitest, Playwright, Vercel</dd>
               <dt>Result</dt><dd>Zero eligibility verdicts on the test set. I also added multi-page support for photos and PDFs. Next up is translation for non-English readers and expansion from Oregon to the rest of the West Coast.</dd>
             </dl>
@@ -398,14 +398,15 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
     <h2 class="sec-title" id="exp-title">Experience</h2>
     <ol class="timeline">
       <li class="role" id="exp-matcha">
-        <div class="date">Jun 2026 – Present</div>
+        <div class="date">Jun 2026 – Nov 2026</div>
         <div class="body">
           <h3>Software Engineer</h3>
           <p class="org">Match'a, mobile and web social app · Remote</p>
           <ul>
-            <li>Lead 3 software engineers building a mobile and web social app, including a feature that renders a user's face as a privacy-preserving avatar</li>
+            <li>Led 3 software engineers building a mobile and web social app, including a feature that renders a user's face as a privacy-preserving avatar</li>
             <li>Engineered the GitHub Actions CI pipeline gating every merge on type checks, linting, a 340+ test suite and a build</li>
-            <li>Hardened security with Twilio webhook signature checks, LLM route rate limits, and Semgrep and gitleaks scans in CI</li>
+            <li>Secured the app with Twilio webhook signature verification, LLM route rate limits and fail-fast secret validation</li>
+            <li>Added Semgrep SAST and gitleaks secret scanning to CI and cleared high-severity npm advisories</li>
             <li>Instrumented Sentry error monitoring across server, edge and client runtimes covering 80+ API routes</li>
           </ul>
         </div>
@@ -431,7 +432,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
           <h3>Undergraduate Student Researcher</h3>
           <p class="org">UC San Diego Jacobs School of Engineering, Faculty Mentor Program · La Jolla, CA</p>
           <ul>
-            <li>Originated the project and ran 4 controlled experiments (baseline, blur, logo occlusion, AI manipulation) on 136 images, advised by Prof. Pengtao Xie (ECE)</li>
+            <li>Stress-tested a vision LLM against blur, logo occlusion and AI fakes in 4 controlled experiments on 136 images, advised by Prof. Pengtao Xie (ECE)</li>
             <li>Built a Next.js app on Claude vision and a Python harness (pandas, Pillow) to degrade, run and score test images</li>
             <li>Found an overconfidence failure: with logos occluded, brand accuracy fell 17 points while model confidence fell only 0.7</li>
             <li>Shipped the findings into the app as confidence thresholds, a low-confidence retake prompt and risk-based wording</li>
@@ -440,7 +441,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
         </div>
       </li>
       <li class="role">
-        <div class="date">May 2017 – May 2020</div>
+        <div class="date">May 2016 – May 2019</div>
         <div class="body">
           <h3>Operations Technology Assistant</h3>
           <p class="org">Youngduk Electronics, electronic components distributor · South Korea</p>
@@ -456,11 +457,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
     <h3 class="sub-title">Leadership</h3>
     <ol class="timeline">
       <li class="role">
-        <div class="date">2020 – 2022</div>
+        <div class="date">2019 – 2021</div>
         <div class="body">
-          <h3>Team Leader</h3>
-          <p class="org">Republic of Korea Army</p>
-          <ul><li>Led 36 recruits as a basic training team leader during 2 years of service</li></ul>
+          <h3>Mandatory National Service</h3>
+          <p class="org">Republic of Korea</p>
+          <ul><li>Selected as trainee platoon leader during basic training for a platoon of 36</li></ul>
         </div>
       </li>
       <li class="role">
@@ -480,7 +481,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
     <h2 class="sec-title" id="about-title">About</h2>
     <div class="about">
       <div>
-        <p class="bio">I'm a computer science student at UC San Diego, graduating in December 2027. I like to test systems on real inputs until they break. ShowBrand started as a side project and turned into research once a vision model stayed confident while it got 17 points less accurate. This summer I took the same question to LG Uplus, one of South Korea's three major telecom carriers, and designed the 7-stage lifecycle its AI red team uses to find unregistered AI. Before UCSD I spent three years at an electronics distributor in Korea, where I built the inventory system the company ran on, and two years in the Army. I work in Korean and English.</p>
+        <p class="bio">I'm a computer science student at UC San Diego, graduating in December 2027. I like to test systems on real inputs until they break. ShowBrand started as a side project and turned into research once a vision model stayed confident while it got 17 points less accurate. This summer I took the same question to LG Uplus, one of South Korea's three major telecom carriers, and designed the 7-stage lifecycle its AI red team uses to find unregistered AI. Before UCSD I spent three years at an electronics distributor in Korea, where I built the inventory system the company ran on. I then completed national service in Korea and earned three associate degrees with honors at El Camino College before transferring. I work in Korean and English.</p>
         <div class="skills">
           <div><h3>Languages</h3><ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>C</li><li>C++</li><li>Java</li><li>SQL</li><li>ARM assembly</li><li>Bash</li></ul></div>
           <div><h3>Security</h3><ul class="chips"><li>MITRE ATLAS</li><li>OWASP LLM Top 10</li><li>Garak</li><li>PyRIT</li><li>Threat modeling</li><li>Webhook validation</li><li>Rate limiting</li><li>PII scrubbing</li><li>Semgrep</li><li>gitleaks</li></ul></div>
@@ -494,6 +495,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
           <h3>Education</h3>
           <p>B.S. Computer Science, UC San Diego</p>
           <p class="meta">Sixth College · Expected December 2027</p>
+          <p style="margin-top:12px">A.S. Mathematics and Physics for Transfer, A.A. General Studies, El Camino College</p>
+          <p class="meta">With Honors · June 2025</p>
         </div>
         <div class="block">
           <h3>Recognition</h3>
@@ -502,6 +505,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px}
             <li>Student Spotlight<span>UCSD Undergraduate Research Hub</span></li>
             <li>Presenter, MURALS 2026<span>IDEA Engineering Student Center</span></li>
             <li>Bill and Mary Kim Scholarship<span>2024, 2025</span></li>
+            <li>Dean's List<span>El Camino College, 3 times</span></li>
             <li>STEM Math Achievement Award<span>2025</span></li>
           </ul>
         </div>
